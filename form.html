@@ -1,0 +1,9 @@
+<html>
+<head>
+<h1>WELCOME <?php session_start(); echo $_SESSION['name'];?></h1>
+</head>
+<form action="view.php" method="post" enctype="multipart/form-data">
+<input type="file" name="file1">
+<input type="submit" value="upload">
+</form>
+</html>

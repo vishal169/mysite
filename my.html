@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function show(str)
+{
+var xml=new XMLHttpRequest();
+xml.onreadystatechange=function(){
+if(xml.readyState==4&& xml.status==200){
+document.getElementById("demo").innerHTML=xml.responseText;
+}
+}
+xml.open("GET","gethint.php?q="+str,true);
+xml.send();
+}
+</script>
+</head>
+<body>
+<input type="text" onsubmit="show(this.value)"><br>
+suggestion<p id="demo"></p>
+</body>
+</html>
